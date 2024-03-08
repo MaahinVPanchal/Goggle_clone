@@ -44,4 +44,5 @@
 .home_body > img {
   object-fit: contain;
   height: 200px;
+  width: auto;
 }
