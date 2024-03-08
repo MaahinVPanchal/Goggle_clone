@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import API_KEY from "./keys";
 
-const CONTEXT_KEY = "27cbfcb0704dd4eb2"; // Replace "YOUR_CONTEXT_KEY" with your actual Custom Search Engine ID
+const CONTEXT_KEY = "YOUR_CONTEXT_KEY"; // Replace "YOUR_CONTEXT_KEY" with your actual Custom Search Engine ID
 
 const useGoogleSearch = (term) => {
   // Accept 'term' as a parameter
