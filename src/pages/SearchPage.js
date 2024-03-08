@@ -5,12 +5,12 @@ import useGoogleSearch from "./useGoogleSearch";
 import Response from "./Response";
 import { Link } from "react-router-dom";
 import Search from "./Search";
-import SearchIcon from "@mui/icons-material/Search";
-import DescriptionIcon from "@mui/icons-material/Description";
-import ImageIcon from "@mui/icons-material/Image";
-import LocalOfferIcon from "@mui/icons-material/LocalOffer";
-import RoomIcon from "@mui/icons-material/Room";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
+// import SearchIcon from "@mui/icons-material/Search";
+// import DescriptionIcon from "@mui/icons-material/Description";
+// import ImageIcon from "@mui/icons-material/Image";
+// import LocalOfferIcon from "@mui/icons-material/LocalOffer";
+// import RoomIcon from "@mui/icons-material/Room";
+// import MoreVertIcon from "@mui/icons-material/MoreVert";
 
 function SearchPage() {
   const [{ term }, dispatch] = useStateValue();
@@ -35,37 +35,43 @@ function SearchPage() {
           <div className="searchPage_options">
             <div className="searchPage_optionsLeft">
               <div className="searchPage_option">
-                <SearchIcon />
-                <Link to="/all">All</Link>
-              </div>
-              <div className="searchPage_option">
-                <DescriptionIcon />
-                <Link to="/news">News</Link>
-              </div>
-              <div className="searchPage_option">
-                <ImageIcon />
+                {/* <ImageIcon /> */}
                 <Link to="/images">Images</Link>
               </div>
+
               <div className="searchPage_option">
-                <LocalOfferIcon />
+                {/* <LocalOfferIcon /> */}
+                <Link to="/videos">Videos</Link>
+              </div>
+
+              <div className="searchPage_option">
+                {/* <DescriptionIcon /> */}
+                <Link to="/news">News</Link>
+              </div>
+
+              <div className="searchPage_option">
+                {/* <DescriptionIcon /> */}
                 <Link to="/shopping">Shopping</Link>
               </div>
+
               <div className="searchPage_option">
-                <RoomIcon />
+                {/* <RoomIcon /> */}
                 <Link to="/maps">Maps</Link>
               </div>
-              <div className="searchPage_option">
-                <MoreVertIcon />
-                <Link to="/more">More</Link>
-              </div>
-            </div>
 
-            <div className="searchPage_optionsRight">
               <div className="searchPage_option">
-                <Link to="/settings">Settings</Link>
+                {/* <MoreVertIcon /> */}
+                <Link to="/books">Books</Link>
               </div>
+
               <div className="searchPage_option">
-                <Link to="/tools">Tools</Link>
+                {/* <MoreVertIcon /> */}
+                <Link to="/flights">Flights</Link>
+              </div>
+
+              <div className="searchPage_option">
+                {/* <MoreVertIcon /> */}
+                <Link to="/finance">Finance</Link>
               </div>
             </div>
           </div>
@@ -93,7 +99,7 @@ function SearchPage() {
               </a>
 
               <a className="searchPage_resultTitle" href={item.link}>
-                <h2>{item.title}</h2>
+                <h3>{item.title}</h3>
               </a>
 
               <p className="searchPage_resultSnippet">{item.snippet}</p>
