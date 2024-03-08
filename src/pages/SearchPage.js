@@ -81,11 +81,11 @@ function SearchPage() {
         <div className="searchPage_results">
           <p className="searchPage_resultCount">
             About {data?.searchInformation.formattedTotalResults}results (
-            {data?.searchInformation.formattedSearchTime}) for {term}
+            {data?.searchInformation.formattedSearchTime} seconds) for {term}
           </p>
 
-          {data?.items.map((item, index) => (
-            <div className="searchPage_result" key={index}>
+          {data?.items.map(item => (
+            <div className="searchPage_result">
               <a className="searchPage_resultLink" href={item.link}>
                 {item.pagemap?.cse_image?.length > 0 &&
                   item.pagemap?.cse_image[0]?.src && (
