@@ -9,7 +9,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 30px;
-  margin-left: 1280px;
+  margin-left: 1180px;
 }
 
 .home_header a {
@@ -44,4 +44,64 @@
   object-fit: contain;
   height: 200px;
   width: auto;
+}
+
+.home_headerRight {
+  position: relative;
+}
+
+/* AppsIcon style */
+.home_headerRight .MuiSvgIcon-root {
+  cursor: pointer;
+}
+/* Home.css */
+
+/* Dropdown container */
+/* Dropdown container */
+.dropMenu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 300px;
+  height: 400px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 7px;
+  overflow: hidden;
+  z-index: 100;
+  padding: 20px;
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+  overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+.dropMenu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dropMenu li {
+  align-items: center;
+  padding: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dropMenu li:hover {
+  background-color: #f2f2f2;
+}
+
+.dropMenu li img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 5px;
+  object-fit: contain;
+}
+
+/* Corrected img hover rule */
+.dropMenu li img:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

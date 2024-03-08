@@ -1,18 +1,89 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
 import AppsIcon from "@mui/icons-material/Apps";
 import { Avatar } from "@mui/material";
+import youtube from "../images/youtube1.png";
+import maps from "../images/maps.png";
+import drive from "../images/drive.png";
+import lens from "../images/lens.png";
+import contact from "../images/contact.png";
+import instagram from "../images/instagram.png";
+import photos from "../images/photos.png";
+import telegram from "../images/telegram.png";
+import whatsapp from "../images/whatsapp.png";
+import classroom from "../images/classroom.png";
+import tiktok from "../images/tiktok.png";
+import snap from "../images/snap.png";
+import sheet from "../images/sheet.png";
+import linkedin from "../images/linkedln.png";
 import Search from "./Search";
 
 const Home = () => {
+  const [isOpen, setIsOpen] = useState(false); // State for dropdown visibility
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen); // Toggle dropdown state on click
+  };
+
   return (
     <div className="home">
       <div className="home_header">
         <div className="home_headerRight">
           <Link to="/gmail">Gmail</Link>
           <Link to="/images">Images</Link>
-          <AppsIcon />
+          <AppsIcon onClick={toggleDropdown} />
+          {isOpen && (
+            <div className="dropMenu">
+              <ul>
+                <li>
+                  <img src={youtube} alt="youtube" />
+                </li>
+                <li>
+                  <img src={classroom} alt="Google classroom" />
+                </li>
+                <li>
+                  <img src={drive} alt="Google Drive" />
+                </li>
+                <li>
+                  <img src={lens} alt="Google lens" />
+                </li>
+                <li>
+                  <img src={telegram} alt="Telegram" />
+                </li>
+                <li>
+                  <img src={whatsapp} alt="Whatsapp" />
+                </li>
+                <li>
+                  <img src={drive} alt="Google Drive" />
+                </li>
+                <li>
+                  <img src={maps} alt="Google Maps" />
+                </li>
+                <li>
+                  <img src={photos} alt="Photos" />
+                </li>
+                <li>
+                  <img src={contact} alt="contact" />
+                </li>
+                <li>
+                  <img src={instagram} alt="Instagram" />
+                </li>
+                <li>
+                  <img src={linkedin} alt="Linkedin" />
+                </li>
+                <li>
+                  <img src={snap} alt="Snapchat" />
+                </li>
+                <li>
+                  <img src={tiktok} alt="tiktok" />
+                </li>
+                <li>
+                  <img src={sheet} alt="Sheet" />
+                </li>
+              </ul>
+            </div>
+          )}
           <Avatar />
         </div>
       </div>
