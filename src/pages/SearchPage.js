@@ -14,10 +14,10 @@ import Search from "./Search";
 
 function SearchPage() {
   const [{ term }, dispatch] = useStateValue();
-  const { data } = useGoogleSearch(term); //LIVE API CALL
+  //const { data } = useGoogleSearch(term); //LIVE API CALL
 
   //Mock API CALL
-  // const data = Response;
+  const data = Response;
 
   console.log(data);
   return (
@@ -80,11 +80,11 @@ function SearchPage() {
       {true && (
         <div className="searchPage_results">
           <p className="searchPage_resultCount">
-            About {data?.searchInformation.formattedTotalResults}results (
-            {data?.searchInformation.formattedSearchTime} seconds) for {term}
+            About {data?.searchInformation?.formattedTotalResults} results (
+            {data?.searchInformation?.formattedSearchTime} seconds) for {term}
           </p>
 
-          {data?.items.map(item => (
+          {data?.items?.map((item) => (
             <div className="searchPage_result">
               <a className="searchPage_resultLink" href={item.link}>
                 {item.pagemap?.cse_image?.length > 0 &&
@@ -101,7 +101,6 @@ function SearchPage() {
               <a className="searchPage_resultTitle" href={item.link}>
                 <h3>{item.title}</h3>
               </a>
-
               <p className="searchPage_resultSnippet">{item.snippet}</p>
             </div>
           ))}
