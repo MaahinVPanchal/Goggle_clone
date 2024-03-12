@@ -10,7 +10,7 @@ import Search from "./Search";
 // import ImageIcon from "@mui/icons-material/Image";
 // import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 // import RoomIcon from "@mui/icons-material/Room";
-// import MoreVertIcon from "@mui/icons-material/MoreVert";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
 
 function SearchPage() {
   const [{ term }, dispatch] = useStateValue();
@@ -73,6 +73,11 @@ function SearchPage() {
                 {/* <MoreVertIcon /> */}
                 <Link to="/finance">Finance</Link>
               </div>
+
+              <div className="searchPage_option">
+                {/* <MoreVertIcon /> */}
+                <Link to="/age">Age</Link>
+              </div>
             </div>
           </div>
         </div>
@@ -96,10 +101,11 @@ function SearchPage() {
                     />
                   )}
                 {item.displayLink}
+                <MoreVertIcon style={{ fontSize: 17, color: "black" }} />
               </a>
 
               <a className="searchPage_resultTitle" href={item.link}>
-                <h3>{item.title}</h3>
+                <h2>{item.title}</h2>
               </a>
               <p className="searchPage_resultSnippet">{item.snippet}</p>
             </div>
