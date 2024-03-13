@@ -41,6 +41,7 @@
 }
 
 .home_body > img {
+  margin-top: 70px;
   object-fit: contain;
   height: 200px;
   width: auto;

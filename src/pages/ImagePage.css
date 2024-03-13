@@ -80,29 +80,3 @@
   margin-left: 185px;
   margin-bottom: 100px;
 }
-
-.searchPage_resultImage {
-  object-fit: contain;
-  height: 25px;
-  width: 25px;
-  margin-right: 10px;
-}
-
-.searchPage_resultTitle {
-  text-decoration: none;
-  font-weight: 400;
-}
-
-.searchPage_resultTitle:hover {
-  text-decoration: underline;
-}
-
-.searchPage_resultTitle > h2 {
-  font-weight: 400;
-  font-size: 20px;
-}
-
-.searchPage_resultSnippet {
-  margin-top: -9px;
-  font-size: 14px;
-}
