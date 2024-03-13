@@ -239,9 +239,10 @@
 }
 @media only screen and (min-width: 250px) and (max-width: 400px) {
   .home {
-    overflow-y: auto; /* Add vertical scrollbar when content overflows */
+    overflow-x: clip;
+    min-width: 116vw;
+    overflow-y: auto;
     max-height: calc(130vh - 200px);
-    max-width: calc(130vw - 100px);
   }
   .home_header {
     padding: 10px;
