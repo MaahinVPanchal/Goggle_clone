@@ -123,7 +123,7 @@
   }
   .home_headerRight {
     display: flex; /* Allow horizontal layout for header elements */
-    margin-left: -700px;
+    margin-left: -675px;
     flex-wrap: wrap;
   }
   .dropMenu {
@@ -194,7 +194,7 @@
 
   .home_inputContainer {
     width: 100%;
-    max-width: 300px;
+    max-width: 600px;
     margin-top: 10px;
   }
 }
@@ -228,11 +228,6 @@
     max-width: 350px;
     margin-top: 15px;
   }
-  
-  .home_body{
-    height: 100px;
-    width: 100px;
-  }
 }
 @media only screen and (min-width: 250px) and (max-width: 400px) {
   .home_header {
@@ -241,6 +236,7 @@
 
   .home_headerRight > a {
     font-size: 14px;
+    margin-right: 2px;
   }
 
   .dropMenu ul li img {
@@ -257,14 +253,10 @@
     height: 28px;
   }
 
-  .home_inputContainer {
-    width: 100%;
-    max-width: 420px;
+  .home_body > img {
+    height: 230px;
+    width: 200px;
     margin-top: 15px;
-  }
-  
-  .home_body{
-    height: 100px;
-    width: 100px;
+    margin-left: 75px;
   }
 }
