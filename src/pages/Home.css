@@ -112,7 +112,7 @@
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   /* General Mobile Optimizations */
   body {
     font-size: 14px; /* Reduce base font size */
@@ -123,7 +123,7 @@
   }
   .home_headerRight {
     display: flex; /* Allow horizontal layout for header elements */
-    margin-left: -600px;
+    margin-left: -700px;
     flex-wrap: wrap;
   }
   .dropMenu {
@@ -168,4 +168,64 @@
     height: 30px; /* Reduce image size for icons */
   }
 }
+/* Styles for small mobile devices (e.g., smartphones) */
+@media only screen and (max-width: 480px) {
+  .home_header {
+    padding: 5px;
+  }
 
+  .home_headerRight > a {
+    font-size: 12px;
+  }
+
+  .dropMenu ul li img {
+    width: 15px;
+    margin-right: 5px;
+  }
+
+  .dropMenu ul li span {
+    font-size: 12px;
+  }
+
+  .home_headerRight > .MuiAvatar-root {
+    width: 25px;
+    height: 25px;
+  }
+
+  .home_inputContainer {
+    width: 90%;
+    max-width: 300px;
+    margin-top: 10px;
+  }
+}
+
+/* Styles for medium-sized mobile devices (e.g., larger smartphones and small tablets) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .home_header {
+    padding: 10px;
+  }
+
+  .home_headerRight > a {
+    font-size: 14px;
+  }
+
+  .dropMenu ul li img {
+    width: 18px;
+    margin-right: 8px;
+  }
+
+  .dropMenu ul li span {
+    font-size: 14px;
+  }
+
+  .home_headerRight > .MuiAvatar-root {
+    width: 28px;
+    height: 28px;
+  }
+
+  .home_inputContainer {
+    width: 90%;
+    max-width: 350px;
+    margin-top: 15px;
+  }
+}
