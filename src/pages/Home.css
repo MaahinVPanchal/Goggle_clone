@@ -130,20 +130,20 @@
   .dropMenu {
     position: absolute;
     top: 100%;
-    left: 0;
-    width: 82%;
+    left: -97px;
+    width: 109%;
     background-color: white;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
     display: none;
-    z-index: 1000; /* Ensure it appears above other elements */
-    max-height: 188px;
+    z-index: 1000;
+    max-height: 241px;
   }
   .home_headerRight:hover .dropMenu {
     display: block; /* Show dropdown on hover */
   }
 
   .dropMenu ul {
-    padding: 10px 12px;
+    padding: 10px 13px;
     margin: -11px -9px;
     list-style: none;
     justify-content: space-evenly;
