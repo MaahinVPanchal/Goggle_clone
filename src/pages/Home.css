@@ -193,7 +193,7 @@
   }
 
   .home_inputContainer {
-    width: 90%;
+    width: 100%;
     max-width: 300px;
     margin-top: 10px;
   }
@@ -224,8 +224,13 @@
   }
 
   .home_inputContainer {
-    width: 90%;
+    width: 100%;
     max-width: 350px;
     margin-top: 15px;
+  }
+  
+  .home_body{
+    height: 100px;
+    width: 100px;
   }
 }
