@@ -3,7 +3,6 @@
   flex-direction: column;
   height: 70vh;
   min-height: 70vh;
-  min-width: auto;
 }
 
 .home_header {
@@ -129,25 +128,31 @@
     flex-wrap: wrap;
   }
   .dropMenu {
-    position: absolute; /* Position dropdown menu absolutely */
-    top: 100%; /* Place it below the header */
-    left: 0; /* Align to left side */
-    width: 100%; /* Span full width */
-    background-color: white; /* Set background color */
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
-    display: none; /* Hide initially */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 82%;
+    background-color: white;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 1000; /* Ensure it appears above other elements */
+    max-height: 188px;
   }
   .home_headerRight:hover .dropMenu {
     display: block; /* Show dropdown on hover */
   }
+
   .dropMenu ul {
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
-    list-style: none; /* Remove bullet points */
+    padding: 10px 12px;
+    margin: -11px -9px;
+    list-style: none;
+    justify-content: space-evenly;
   }
   .dropMenu li {
-    padding: 10px; /* Add padding for touch targets */
-    cursor: pointer; /* Indicate clickable elements */
+    padding: 10px;
+    cursor: pointer;
+    height: 48px;
+    width: 39px; /* Indicate clickable elements */
   }
   .dropMenu li:hover {
     background-color: #f0f0f0; /* Add hover effect */
@@ -212,7 +217,7 @@
   }
 
   .dropMenu ul li img {
-    width: 18px;
+    width: 28px;
     margin-right: 8px;
   }
 
@@ -232,7 +237,6 @@
   }
 }
 @media only screen and (min-width: 250px) and (max-width: 400px) {
-  
   .home_header {
     padding: 10px;
   }
@@ -243,8 +247,8 @@
   }
 
   .dropMenu ul li img {
-    width: 18px;
-    margin-right: 8px;
+    width: 29px;
+    margin-right: -3px;
   }
 
   .dropMenu ul li span {
@@ -254,6 +258,11 @@
   .home_headerRight > .MuiAvatar-root {
     width: 28px;
     height: 28px;
+  }
+
+  .home_headerRight > .MuiSvgIcon-root {
+    margin-right: 20px;
+    height: 20px;
   }
 
   .home_body > img {
