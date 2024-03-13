@@ -234,3 +234,37 @@
     width: 100px;
   }
 }
+@media only screen and (min-width: 250px) and (max-width: 400px) {
+  .home_header {
+    padding: 10px;
+  }
+
+  .home_headerRight > a {
+    font-size: 14px;
+  }
+
+  .dropMenu ul li img {
+    width: 18px;
+    margin-right: 8px;
+  }
+
+  .dropMenu ul li span {
+    font-size: 14px;
+  }
+
+  .home_headerRight > .MuiAvatar-root {
+    width: 28px;
+    height: 28px;
+  }
+
+  .home_inputContainer {
+    width: 100%;
+    max-width: 420px;
+    margin-top: 15px;
+  }
+  
+  .home_body{
+    height: 100px;
+    width: 100px;
+  }
+}
