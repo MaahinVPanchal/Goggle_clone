@@ -24,17 +24,26 @@
   width: 28px;
   object-fit: contain;
   margin-right: 10px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Added transition for transform */
 }
+
+.search_input_mic:hover {
+  cursor: pointer;
+  transform: scale(1.1); /* Increase size on hover for a subtle zoom effect */
+}
+
+.search_input_mic:active {
+  box-shadow: 0 0 10px 0 rgba(227, 91, 91, 0.5); /* Add box shadow on click */
+  border-radius: 50%;
+  transform: scale(1.1); /* Scale up slightly on click */
+}
+
 
 .search_input_googlelens {
   height: 20px;
   width: 20px;
   object-fit: contain;
   margin-right: 5px;
-}
-
-.search_input_mic:hover {
-  cursor: pointer;
 }
 
 .search_input_googlelens:hover {
