@@ -1,25 +1,17 @@
 import React from "react";
 import { useStateValue } from "../StateProvider";
-import useGoogleSearch from "./useGoogleSearch";
-import Response from "./Response1";
+import useGoogleSearch from "./useGoogleSearch"; // Assuming this hook fetches news data
 import { Link } from "react-router-dom";
 import Search from "./Search";
-// import SearchIcon from "@mui/icons-material/Search";
-// import DescriptionIcon from "@mui/icons-material/Description";
-// import ImageIcon from "@mui/icons-material/Image";
-// import LocalOfferIcon from "@mui/icons-material/LocalOffer";
-// import RoomIcon from "@mui/icons-material/Room";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
 import google_logo from "../images/google_logo2.png";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
+import Response from "./Response1";
 
-function ImagePage() {
+function NewsPage() {
   const [{ term }, dispatch] = useStateValue();
-  //const { data } = useGoogleSearch(term); //LIVE API CALL
-
-  //Mock API CALL
+  //const { data } = useGoogleSearch(term); // Assuming useGoogleSearch hook fetches news data
   const data = Response;
 
-  console.log(data);
   return (
     <div className="searchPage">
       <div className="searchPage_header">
@@ -78,39 +70,18 @@ function ImagePage() {
           </div>
         </div>
       </div>
-      {true && (
+      {data && (
         <div className="searchPage_results">
           <p className="searchPage_resultCount">
             About {data?.searchInformation?.formattedTotalResults} results (
             {data?.searchInformation?.formattedSearchTime} seconds) for {term}
           </p>
-
           <div className="searchPage_result">
-            <style>
-              {`.searchPage_image{
-                  object-fit:contain;
-                  height:250px;
-                  width:250px
-              }
-              .searchPage_result{
-                display:flex;
-                flex-wrap: wrap;
-                margin-right:15px;
-                max-width:100%;
-              }
-              `}
-            </style>
-            {data?.items?.map((item) => (
-              <div className="searchPage_result">
+            {data?.items?.map((item, index) => (
+              <div className="searchPage_newsItem" key={index}>
                 <a className="searchPage_resultLink" href={item.link}>
-                  {item.pagemap?.cse_image?.length > 0 &&
-                    item.pagemap?.cse_image[0]?.src && (
-                      <img
-                        className="searchPage_image"
-                        src={item.pagemap.cse_image[0].src}
-                        alt=""
-                      />
-                    )}
+                  <h2 className="searchPage_newsTitle">{item.title}</h2>
+                  <p className="searchPage_newsSnippet">{item.snippet}</p>
                 </a>
               </div>
             ))}
@@ -121,4 +92,4 @@ function ImagePage() {
   );
 }
 
-export default ImagePage;
+export default NewsPage;
