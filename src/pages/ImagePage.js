@@ -30,6 +30,9 @@ function ImagePage() {
           <Search hideButtons />
           <div className="searchPage_options">
             <div className="searchPage_optionsLeft">
+              <div className="searchPage_optionAll">
+                <Link to="/search">&lt; All</Link>
+              </div>
               <div className="searchPage_option">
                 {/* <ImageIcon /> */}
                 <Link to="/images">Images</Link>

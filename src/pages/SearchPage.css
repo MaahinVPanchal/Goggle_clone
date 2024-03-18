@@ -61,6 +61,17 @@
   font-weight: 400;
 }
 
+.searchPage_optionAll {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+  margin-left: 10px;
+  border: none;
+  padding: 9px 9px;
+  border-radius: 19px;
+  margin-top: -11px;
+  font-weight: 400;
+}
 .searchPage_option:hover {
   background-color: rgba(238, 238, 238, 0.79);
 }

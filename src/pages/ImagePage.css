@@ -34,6 +34,22 @@
   color: black;
 }
 
+.searchPage_optionAll {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+  margin-left: 10px;
+  padding: 9px 9px;
+  border-radius: 19px;
+  margin-top: -11px;
+  font-weight: 400;
+}
+
+.searchPage_optionAll:hover {
+  border: 1px solid lightslategray;
+  background-color: rgb(151, 151, 151);
+}
+
 .searchPage_optionsRight,
 .searchPage_optionsLeft {
   display: flex;
