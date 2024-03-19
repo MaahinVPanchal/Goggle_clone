@@ -1,4 +1,4 @@
-*{
+* {
   margin: auto;
   padding: 0;
 }
@@ -10,7 +10,7 @@
   width: 105vw;
   max-width: 110vw;
   background-color: var(--bg-clr);
-  color: var(--text-color); 
+  color: var(--text-color);
 }
 
 .home_header {
@@ -51,11 +51,11 @@
 }
 
 .home_body > img {
-    margin-top: 70px;
-    object-fit: contain;
-    height: 200px;
-    width: auto;
-    margin-left: 21px;
+  margin-top: 70px;
+  object-fit: contain;
+  height: 200px;
+  width: auto;
+  margin-left: 21px;
 }
 
 .darkmode-icon {
@@ -295,5 +295,8 @@
     width: 200px;
     margin-top: 15px;
     margin-left: 56px;
+  }
+  .darkmode-icon {
+    top: 707px;
   }
 }
