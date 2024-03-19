@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
 import AppsIcon from "@mui/icons-material/Apps";
@@ -21,13 +21,25 @@ import twitter from "../assets/twitter.png";
 import facebook from "../assets/facebook-icon.png";
 import Search from "./Search";
 import google_logo from "../images/google_logo2.png";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false); // State for dropdown visibility
+  const [theme, setTheme] = useState("light-theme");
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen); // Toggle dropdown state on click
   };
+
+  const toggleDarkMode = () => {
+    setTheme((prevTheme) =>
+      prevTheme === "light-theme" ? "dark-theme" : "light-theme"
+    );
+  };
+
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
 
   return (
     <div className="home">
@@ -246,6 +258,7 @@ const Home = () => {
         <img src={google_logo} alt="" />
         <div className="home_inputContainer">
           <Search />
+          <DarkModeIcon className="darkmode-icon" onClick={toggleDarkMode} />
         </div>
       </div>
     </div>

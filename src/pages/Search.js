@@ -52,7 +52,7 @@ function Search({ hideButtons = false }) {
         {/* Mic icon for voice search */}
         <img
           className="search_input_mic"
-          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAABcCAMAAADUMSJqAAAAzFBMVEX///8eiOXlOTURheRpqOz7wC1Mr1DlNzMAguQAfePlNTFetWFTslYAf+PlMy/kJiH8x0/qa2jjHRbkKybsLzPp9On1+v7q8fy61fUmi+Xd6vo1j+avzfN0rOz7uwD7vRaVv/DukY/7xUWDte787Oz+9vbyrq30uLf75ORAq0RaoOrU5Pn+7cz95rv1wcHpY2D40dH94KTwoaD+89z81obsfHr++OzmRkPnT0z946/92pXylVb8yCvxjEb73c/jDAB9o1t/k0ePiEaJkkyS9ri9AAACEElEQVRoge3Xa2/aMBQG4MSBOmSNDXHHvdAQSNLSAmWlzbZu3dj//0/zBaIE+qE1jlSp5/3kGOnR4XCMHMuCQCAQyKdLu9NpV0R3b3qO07vpVkD3B75j8zj+oG/anruSlrw7N2u37dwWfMcoXnPtIl4zaXcadikNk6UP3TLuDg3ikVPGncggXjvETTYdcMABBxxwwAF/e24nzWZzcifXl4f4pdxeLFut1nKlg4/q9fr4Xq6vDu8tV3J7TQkhgQ7+bSzwB7me+2XcV1fRDUEIBakG/ijwelM99Mq4rXafPIQwmWrg1kTg40e57pYui756AUgpL9zLdGzrQeLf1UNUaIyvfk4rZBwnGy38TvZlsnuKGvuJaewuijOGOU4XWrg1KpZudQe+6ziu39u/FG1E4TjQs60f40LXefrDKBrmryyLgNuIhZq4mpe8MeWkRDQFM61ZEbmX+vPP2fFHU+bJwte6tprG518X2dE5WRFpe0jfFo3hNiJBucBZGIieIEx1Tmee2xG3hfIU581N10TMiTj5mmO4z+9Afn/kUZaFcZLEYcbkfIspjE+zRXeJKhN7jFHKiKdo5AXJqTafiyXdccVghk/qd54EH/GM6h6eo8xiHLB9O/ifLH3ZmCl7l1WY4QsZilrJK6fqxEz//N1ut/9S87LIlzOe80powAF/T86vec4qwr/KVIRDIBAI5OPmP1zlKFPNXfTiAAAAAElFTkSuQmCC"
+          src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-25-512.png"
           alt="Voice Search"
           onClick={handleVoiceSearch} // Call handleVoiceSearch on mic icon click
         />

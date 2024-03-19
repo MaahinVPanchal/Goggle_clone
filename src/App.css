@@ -1,0 +1,13 @@
+/* Styles for the dark theme */
+.dark-theme {
+  --bg-clr: rgb(0, 0, 0);
+  --text-color: white;
+  --link-color: #4CAF50; /* Example of custom link color in dark mode */
+}
+
+/* Styles for the light theme */
+.light-theme {
+  --bg-clr: rgb(255, 255, 255);
+  --text-color: black;
+  --link-color: #007bff; /* Example of custom link color in light mode */
+}

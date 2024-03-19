@@ -17,6 +17,8 @@
   padding: 10px 20px;
   font-size: medium;
   border: none;
+  color: var(--text-color); /* Text color based on the theme */
+  background-color: var(--bg-clr);
 }
 
 .search_input_mic {
@@ -25,6 +27,7 @@
   object-fit: contain;
   margin-right: 10px;
   transition: box-shadow 0.3s ease, transform 0.3s ease; /* Added transition for transform */
+  background-color: var(--bg-clr);
 }
 
 .search_input_mic:hover {
@@ -59,18 +62,19 @@
 }
 
 .search_buttons {
-  margin-top: 30px;
+  margin-top: 35px;
   display: flex;
   justify-content: center;
+  margin-left: 23px;
 }
 
 .search_buttons button {
   margin: 5px;
   padding: 7px 15px;
-  background-color: #f8f8f8;
-  border: 1px solid white;
+  background-color: var(--bg-clr);
+  border: 1px solid rgb(205, 197, 197);
   text-transform: inherit;
-  color: #5f6368;
+  color: var(--text-color);
 }
 
 .search_buttons button:hover {
@@ -98,7 +102,7 @@
     max-width: 566px;
     box-shadow: 0 2px 4px 0 rgba(95, 99, 104, 0.4);
     height: 23px;
-    margin-left: 4px;
+    margin-left: 5px;
   }
   .search_input > input {
     flex: 1 1;
