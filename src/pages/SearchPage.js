@@ -63,7 +63,7 @@ function SearchPage() {
                 </div>
 
                 <div className="searchPage_option">
-                  {/* <MoreVertIcon /> */}
+                  <MoreVertIcon />
                   <select
                     onChange={(e) => {
                       /* Handle selection */

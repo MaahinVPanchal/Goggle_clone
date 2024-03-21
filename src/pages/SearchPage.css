@@ -60,6 +60,16 @@
   font-weight: 400;
 }
 
+.searchPage_optiondropdownselect {
+  margin-top: -3px;
+  text-align: right;
+  font-weight: 400;
+  margin-left: 14px;
+}
+
+.searchPage_optiondropdownselect select {
+  border: none;
+}
 .searchPage_option :hover {
   border-bottom: #70757a;
   text-decoration: underline;
