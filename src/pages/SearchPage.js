@@ -32,49 +32,53 @@ function SearchPage() {
           <Search hideButtons />
           <div className="searchPage_options">
             <div className="searchPage_optionsLeft">
-              <div className="searchPage_option">
-                {/* <ImageIcon /> */}
-                <Link to="/images">Images</Link>
-              </div>
+              <div className="searchPage_optionsLeft">
+                <div className="searchPage_option">
+                  <Link to="/search">All</Link>
+                </div>
 
-              <div className="searchPage_option">
-                {/* <LocalOfferIcon /> */}
-                <Link to="/videos">Videos</Link>
-              </div>
+                <div className="searchPage_option">
+                  {/* <ImageIcon /> */}
+                  <Link to="/images">Images</Link>
+                </div>
 
-              <div className="searchPage_option">
-                {/* <DescriptionIcon /> */}
-                <Link to="/news">News</Link>
-              </div>
+                <div className="searchPage_option">
+                  {/* <LocalOfferIcon /> */}
+                  <Link to="/videos">Videos</Link>
+                </div>
 
-              <div className="searchPage_option">
-                {/* <DescriptionIcon /> */}
-                <Link to="/shopping">Shopping</Link>
-              </div>
+                <div className="searchPage_option">
+                  {/* <DescriptionIcon /> */}
+                  <Link to="/news">News</Link>
+                </div>
 
-              <div className="searchPage_option">
-                {/* <RoomIcon /> */}
-                <Link to="/maps">Maps</Link>
-              </div>
+                <div className="searchPage_option">
+                  {/* <DescriptionIcon /> */}
+                  <Link to="/shopping">Shopping</Link>
+                </div>
 
-              <div className="searchPage_option">
-                {/* <MoreVertIcon /> */}
-                <Link to="/books">Books</Link>
-              </div>
+                <div className="searchPage_option">
+                  {/* <RoomIcon /> */}
+                  <Link to="/maps">Maps</Link>
+                </div>
 
-              <div className="searchPage_option">
-                {/* <MoreVertIcon /> */}
-                <Link to="/flights">Flights</Link>
-              </div>
-
-              <div className="searchPage_option">
-                {/* <MoreVertIcon /> */}
-                <Link to="/finance">Finance</Link>
-              </div>
-
-              <div className="searchPage_option">
-                {/* <MoreVertIcon /> */}
-                <Link to="/age">Age</Link>
+                <div className="searchPage_option">
+                  {/* <MoreVertIcon /> */}
+                  <select
+                    onChange={(e) => {
+                      /* Handle selection */
+                    }}
+                  >
+                    <option value="">
+                      <MoreVertIcon />
+                      More
+                    </option>
+                    <option value="/books">Books</option>
+                    <option value="/flights">Flights</option>
+                    <option value="/finance">Finance</option>
+                    <option value="/age">Age</option>
+                  </select>
+                </div>
               </div>
             </div>
           </div>
