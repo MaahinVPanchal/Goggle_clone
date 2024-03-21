@@ -7,7 +7,6 @@
   display: flex;
   position: sticky;
   top: 0;
-  background-color: var(--bg-clr);
   z-index: 100;
   align-items: flex-start;
   padding: 18px;
@@ -26,6 +25,7 @@
   width: 600px;
   margin: 11px;
   max-width: 600px;
+  background-color: var(--bg-clr);
 }
 
 .searchPage_options {
@@ -93,7 +93,6 @@
   margin-top: 17px;
   margin-left: 185px;
   margin-bottom: 100px;
-  background-color: var(--bg-clr);
 }
 
 .searchPage_resultImage {
@@ -175,7 +174,7 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-left: -37px;
-    margin-top: -8px;
+    margin-top: -6.5px;
   }
   .searchPage_option {
     margin: 4px; /* Adjust margin for better spacing */
