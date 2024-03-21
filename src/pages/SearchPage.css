@@ -155,11 +155,11 @@
   }
   .searchPage_headerBody > .search > .search_input {
     margin-top: 10px;
-    width: 253px;
+    width: 260px;
     margin: 9px;
     max-width: 338px;
     margin-left: -17px;
-    height: 30px;
+    height: 18px;
   }
 }
 
