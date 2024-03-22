@@ -5,7 +5,7 @@
 
 .searchPage_header {
   display: flex;
-  position: sticky;
+  position: relative;
   top: 0;
   z-index: 100;
   align-items: flex-start;
@@ -90,7 +90,7 @@
 }
 
 .searchPage_result {
-  margin: 30px 0;
+  margin: 10px 0;
 }
 
 .searchPage_resultCount {
@@ -103,6 +103,7 @@
   margin-top: 17px;
   margin-left: 185px;
   margin-bottom: 100px;
+  position: absolute;
 }
 
 .searchPage_resultImage {

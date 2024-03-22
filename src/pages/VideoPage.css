@@ -1,0 +1,89 @@
+/* VideoPage.css */
+
+/* Container for the entire page */
+.searchPage {
+  width: 100%;
+  height: 100%;
+}
+
+/* Header styling */
+.searchPage_header {
+  position: fixed; /* Fixed position */
+  top: 0; /* Position at the top of the viewport */
+  left: 0;
+  width: 100%;
+  background-color: #ffffff; /* Header background color */
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Header body styling */
+.searchPage_headerBody {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Google logo styling */
+.searchPage_logo {
+  width: 120px; /* Adjust as needed */
+  height: auto;
+}
+
+/* Options styling */
+.searchPage_options {
+  margin-left: auto; /* Move options to the right */
+}
+
+/* Results styling */
+.searchPage_results {
+  margin-top: 70px; /* Adjust according to header height */
+  padding: 20px;
+}
+
+/* Result count styling */
+.searchPage_resultCount {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+/* Individual result container */
+.searchPage_result {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Individual result link container */
+.searchPage_resultLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000000; /* Set link color */
+  margin-bottom: 50px;
+}
+
+/* Video thumbnail styling */
+.searchPage_image {
+  width: 250px; /* Set thumbnail width */
+  height: 150px; /* Set thumbnail height */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  border-radius: 5px; /* Add rounded corners */
+  margin-right: 20px; /* Add some margin to the right */
+  border-radius: 15px;
+}
+
+/* Title and description styling */
+.yt_title_description {
+  flex: 1;
+}
+
+/* Description styling */
+.yt_title_description p {
+  font-size: 14px; /* Set font size */
+  margin-top: 5px; /* Add some margin at the top */
+}
+
+/* Link styling */
+.yt_video a {
+  text-decoration: none; /* Remove default underline */
+  color: inherit; /* Inherit color from parent */
+}

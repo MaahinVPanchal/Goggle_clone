@@ -1,25 +1,16 @@
 import React from "react";
 import { useStateValue } from "../StateProvider";
-import useGoogleSearch from "./useGoogleSearch";
-import Response from "./Response";
+import useGoogleSearchyt from "./useGoogleSearchyt";
 import { Link } from "react-router-dom";
-import Search from "./Search";
-// import SearchIcon from "@mui/icons-material/Search";
-// import DescriptionIcon from "@mui/icons-material/Description";
-// import ImageIcon from "@mui/icons-material/Image";
-// import LocalOfferIcon from "@mui/icons-material/LocalOffer";
-// import RoomIcon from "@mui/icons-material/Room";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
 import google_logo from "../images/google_logo2.png";
+import Search from "./Search";
+import Response from "./Response2.js";
 
-function ImagePage() {
-  const [{ term }, dispatch] = useStateValue();
-  //const { data } = useGoogleSearch(term); //LIVE API CALL
-
-  //Mock API CALL
+function VideoPage() {
+  const [{ term }] = useStateValue();
+  //const { data } = useGoogleSearchyt(term);
   const data = Response;
 
-  console.log(data);
   return (
     <div className="searchPage">
       <div className="searchPage_header">
@@ -81,51 +72,43 @@ function ImagePage() {
           </div>
         </div>
       </div>
-      {true && (
-        <div className="searchPage_results">
-          <p className="searchPage_resultCount">
-            About {data?.searchInformation?.formattedTotalResults} results (
-            {data?.searchInformation?.formattedSearchTime} seconds) for {term}
-          </p>
 
+      <div className="searchPage_results">
+        {data && (
+          <p className="searchPage_resultCount">
+            About {data.pageInfo.totalResults} results for {term}
+          </p>
+        )}
+
+        {data && data.items && (
           <div className="searchPage_result">
-            <style>
-              {`.searchPage_image{
-                  object-fit:contain;
-                  height:250px;
-                  width:250px
-              }
-              .searchPage_result{
-                display:flex;
-                flex-wrap: wrap;
-                margin-right:15px;
-                max-width:100%;
-              }
-              `}
-            </style>
-            {data?.items?.map((item, index) => (
+            {data.items.map((item, index) => (
               <div className="searchPage_result" key={index}>
-                <a className="searchPage_resultLink" href={item.link}>
-                  {item.videoobject &&
-                    item.videoobject.length > 0 && ( // Check if videoobject exists and is not empty
-                      <iframe
-                        title="video-player"
-                        width="250"
-                        height="250"
-                        src={item.videoobject[0].embedurl} // Change to embedurl
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                      ></iframe>
-                    )}
-                </a>
+                <div className="searchPage_resultLink">
+                  <div className="yt_video">
+                    <a
+                      className="searchPage_resultLink"
+                      href={`https://www.youtube.com/watch?v=${item.id.videoId}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        className="searchPage_image"
+                        src={item.snippet.thumbnails.medium.url}
+                        alt={item.snippet.title}
+                      />
+                    </a>
+                    {item.snippet.title}
+                    {item.snippet.description}
+                  </div>
+                </div>
               </div>
             ))}
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }
 
-export default ImagePage;
+export default VideoPage;
