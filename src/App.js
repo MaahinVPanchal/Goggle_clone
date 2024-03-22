@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import SearchPage from "./pages/SearchPage";
 import ImagePage from "./pages/ImagePage";
 import NewsPage from "./pages/NewsPage";
-
+import VideoPage from "./pages/VideoPage";
 function App() {
   return (
     <div className="App">
@@ -14,6 +14,7 @@ function App() {
           <Route path="/search" element={<SearchPage />} />
           <Route path="/images" element={<ImagePage />} />
           <Route path="/news" element={<NewsPage />} />
+          <Route path="/videos" element={<VideoPage />} />
           <Route path="/" element={<Home />} />
         </Routes>
       </Router>

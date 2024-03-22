@@ -1640,6 +1640,7 @@ export default {
             height: "163",
           },
         ],
+
         newsmediaorganization: [
           {
             foundingdate: "'1989-04-17'",
