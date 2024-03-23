@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SearchPage.css";
 import { useStateValue } from "../StateProvider";
 import useGoogleSearch from "./useGoogleSearch";
@@ -22,6 +22,14 @@ function SearchPage() {
   const data = Response;
 
   console.log(data);
+
+  const [selectedOption, setSelectedOption] = useState("");
+
+  // Define handleSelection function to update selected option
+  const handleSelection = (value) => {
+    setSelectedOption(value);
+    // Add logic here to handle the selected option
+  };
   return (
     <div className="searchPage">
       <div className="searchPage_header">
@@ -53,31 +61,55 @@ function SearchPage() {
                 </div>
 
                 <div className="searchPage_option">
-                  {/* <DescriptionIcon /> */}
-                  <Link to="/shopping">Shopping</Link>
-                </div>
-
-                <div className="searchPage_option">
-                  {/* <RoomIcon /> */}
-                  <Link to="/maps">Maps</Link>
-                </div>
-
-                <div className="searchPage_option">
-                  <MoreVertIcon />
-                  <select
-                    onChange={(e) => {
-                      /* Handle selection */
-                    }}
-                  >
-                    <option value="">
-                      <MoreVertIcon />
-                      More
-                    </option>
-                    <option value="/books">Books</option>
-                    <option value="/flights">Flights</option>
-                    <option value="/finance">Finance</option>
-                    <option value="/age">Age</option>
-                  </select>
+                  <div className="dropdown">
+                    <MoreVertIcon className="dropdown-icon" />
+                    <button className="dropdown-btn">More</button>
+                    <div className="dropdown-content">
+                      <p
+                        className="dropdown-option"
+                        onClick={() => handleSelection("")}
+                      >
+                        <MoreVertIcon className="dropdown-icon" />
+                        More
+                      </p>
+                      <p
+                        className="dropdown-option"
+                        onClick={() => handleSelection("/books")}
+                      >
+                        Books
+                      </p>
+                      <p
+                        className="dropdown-option"
+                        onClick={() => handleSelection("/shopping")}
+                      >
+                        Shopping
+                      </p>
+                      <p
+                        className="dropdown-option"
+                        onClick={() => handleSelection("/maps")}
+                      >
+                        Maps
+                      </p>
+                      <p
+                        className="dropdown-option"
+                        onClick={() => handleSelection("/flights")}
+                      >
+                        Flights
+                      </p>
+                      <p
+                        className="dropdown-option"
+                        onClick={() => handleSelection("/finance")}
+                      >
+                        Finance
+                      </p>
+                      <p
+                        className="dropdown-option"
+                        onClick={() => handleSelection("/age")}
+                      >
+                        Age
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

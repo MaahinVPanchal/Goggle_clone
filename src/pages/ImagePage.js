@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import { useStateValue } from "../StateProvider";
 import useGoogleSearch from "./useGoogleSearch";
 import Response from "./Response1";
@@ -19,6 +19,13 @@ function ImagePage() {
   //Mock API CALL
   const data = Response;
 
+  const [selectedOption, setSelectedOption] = useState("");
+
+  // Define handleSelection function to update selected option
+  const handleSelection = (value) => {
+    setSelectedOption(value);
+    // Add logic here to handle the selected option
+  };
   console.log(data);
   return (
     <div className="searchPage">
@@ -49,33 +56,55 @@ function ImagePage() {
               </div>
 
               <div className="searchPage_option">
-                {/* <DescriptionIcon /> */}
-                <Link to="/shopping">Shopping</Link>
-              </div>
-
-              <div className="searchPage_option">
-                {/* <RoomIcon /> */}
-                <Link to="/maps">Maps</Link>
-              </div>
-
-              <div className="searchPage_option">
-                {/* <MoreVertIcon /> */}
-                <Link to="/books">Books</Link>
-              </div>
-
-              <div className="searchPage_option">
-                {/* <MoreVertIcon /> */}
-                <Link to="/flights">Flights</Link>
-              </div>
-
-              <div className="searchPage_option">
-                {/* <MoreVertIcon /> */}
-                <Link to="/finance">Finance</Link>
-              </div>
-
-              <div className="searchPage_option">
-                {/* <MoreVertIcon /> */}
-                <Link to="/age">Age</Link>
+                <div className="dropdown">
+                  <MoreVertIcon className="dropdown-icon" />
+                  <button className="dropdown-btn">More</button>
+                  <div className="dropdown-content">
+                    <p
+                      className="dropdown-option"
+                      onClick={() => handleSelection("")}
+                    >
+                      <MoreVertIcon className="dropdown-icon" />
+                      More
+                    </p>
+                    <p
+                      className="dropdown-option"
+                      onClick={() => handleSelection("/books")}
+                    >
+                      Books
+                    </p>
+                    <p
+                      className="dropdown-option"
+                      onClick={() => handleSelection("/shopping")}
+                    >
+                      Shopping
+                    </p>
+                    <p
+                      className="dropdown-option"
+                      onClick={() => handleSelection("/maps")}
+                    >
+                      Maps
+                    </p>
+                    <p
+                      className="dropdown-option"
+                      onClick={() => handleSelection("/flights")}
+                    >
+                      Flights
+                    </p>
+                    <p
+                      className="dropdown-option"
+                      onClick={() => handleSelection("/finance")}
+                    >
+                      Finance
+                    </p>
+                    <p
+                      className="dropdown-option"
+                      onClick={() => handleSelection("/age")}
+                    >
+                      Age
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

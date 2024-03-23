@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Api_key } from "./keys";
+import { Api_key } from "./keys1";
 
 const useGoogleSearchyt = (term) => {
   const [data, setData] = useState(null);

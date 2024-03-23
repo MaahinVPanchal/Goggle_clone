@@ -1,4 +1,3 @@
-export const API_KEY = "Your api key";
-export const Api_key = "Your yt api";
+export const API_KEY = "your api_key";
 
-export default {Api_key,API_KEY};
+export default API_KEY;

@@ -87,3 +87,46 @@
   text-decoration: none; /* Remove default underline */
   color: inherit; /* Inherit color from parent */
 }
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  background-color: #f1f1f1;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  top: 100%;
+  left: 0;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 110px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+  padding: 8px 12px;
+}
+
+.dropdown-option {
+  color: black;
+  padding: 11px 16px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+.dropdown-option:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-icon {
+  vertical-align: middle;
+  margin-right: 5px;
+}
