@@ -1,6 +1,6 @@
 * {
-  margin: -1.25px;
-  padding-top: 1px;
+  margin: 0px;
+  padding-top: 0px;
 }
 
 .searchPage_header {
@@ -9,15 +9,15 @@
   top: 0;
   z-index: 100;
   align-items: flex-start;
-  padding: 18px;
+  padding: 2px;
   border-bottom: 1px solid lightgrey;
 }
 .searchPage_logo {
   object-fit: cover;
   height: 55px;
-  margin-right: 40px;
+  margin-right: 28px;
   margin-top: 10px;
-  margin-left: 10px;
+  margin-left: 23px;
 }
 
 .searchPage_headerBody > .search > .search_input {
@@ -53,7 +53,7 @@
   display: flex;
   align-items: center;
   margin-right: 8px;
-  margin-left: 10px;
+  margin-left: 12px;
   padding: 9px 9px;
   border-radius: 19px;
   margin-top: -11px;
@@ -90,7 +90,7 @@
 }
 
 .searchPage_result {
-  margin: 10px 0;
+  margin: 24px 0;
 }
 
 .searchPage_resultCount {
@@ -100,8 +100,8 @@
 
 .searchPage_results {
   max-width: 750px;
-  margin-top: 17px;
-  margin-left: 185px;
+  margin-top: 15px;
+  margin-left: 171px;
   margin-bottom: 100px;
   position: absolute;
 }
@@ -125,6 +125,7 @@
 .searchPage_resultTitle > h2 {
   font-weight: 400;
   font-size: 20px;
+  margin-bottom: 10px;
 }
 
 .searchPage_resultSnippet {
@@ -150,7 +151,7 @@
   position: absolute;
   background-color: #f9f9f9;
   min-width: 110px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   z-index: 1;
   padding: 8px 12px;
 }
