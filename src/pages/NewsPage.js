@@ -30,71 +30,73 @@ function NewsPage() {
           <div className="searchPage_options">
             <div className="searchPage_optionsLeft">
               <div className="searchPage_optionAll">
-                <Link to="/search">&lt; All</Link>
-              </div>
-              <div className="searchPage_option">
-                {/* <ImageIcon /> */}
-                <Link to="/images">Images</Link>
-              </div>
+                <div className="searchPage_option">
+                  <Link to="/search">All</Link>
+                </div>
+                <div className="searchPage_option">
+                  {/* <ImageIcon /> */}
+                  <Link to="/images">Images</Link>
+                </div>
 
-              <div className="searchPage_option">
-                {/* <LocalOfferIcon /> */}
-                <Link to="/videos">Videos</Link>
-              </div>
+                <div className="searchPage_option">
+                  {/* <LocalOfferIcon /> */}
+                  <Link to="/videos">Videos</Link>
+                </div>
 
-              <div className="searchPage_option">
-                {/* <DescriptionIcon /> */}
-                <Link to="/news">News</Link>
-              </div>
+                <div className="searchPage_option">
+                  {/* <DescriptionIcon /> */}
+                  <Link to="/news">News</Link>
+                </div>
 
-              <div className="searchPage_option">
-                <div className="dropdown">
-                  <MoreVertIcon className="dropdown-icon" />
-                  <button className="dropdown-btn">More</button>
-                  <div className="dropdown-content">
-                    <p
-                      className="dropdown-option"
-                      onClick={() => handleSelection("")}
-                    >
-                      <MoreVertIcon className="dropdown-icon" />
-                      More
-                    </p>
-                    <p
-                      className="dropdown-option"
-                      onClick={() => handleSelection("/books")}
-                    >
-                      Books
-                    </p>
-                    <p
-                      className="dropdown-option"
-                      onClick={() => handleSelection("/shopping")}
-                    >
-                      Shopping
-                    </p>
-                    <p
-                      className="dropdown-option"
-                      onClick={() => handleSelection("/maps")}
-                    >
-                      Maps
-                    </p>
-                    <p
-                      className="dropdown-option"
-                      onClick={() => handleSelection("/flights")}
-                    >
-                      Flights
-                    </p>
-                    <p
-                      className="dropdown-option"
-                      onClick={() => handleSelection("/finance")}
-                    >
-                      Finance
-                    </p>
-                    <p
-                      className="dropdown-option"
-                      onClick={() => handleSelection("/age")}
-                    >
-                      Age
-                    </p>
+                <div className="searchPage_option">
+                  <div className="dropdown">
+                    <MoreVertIcon className="dropdown-icon" />
+                    <button className="dropdown-btn">More</button>
+                    <div className="dropdown-content">
+                      <p
+                        className="dropdown-option"
+                        onClick={() => handleSelection("")}
+                      >
+                        <MoreVertIcon className="dropdown-icon" />
+                        More
+                      </p>
+                      <p
+                        className="dropdown-option"
+                        onClick={() => handleSelection("/books")}
+                      >
+                        Books
+                      </p>
+                      <p
+                        className="dropdown-option"
+                        onClick={() => handleSelection("/shopping")}
+                      >
+                        Shopping
+                      </p>
+                      <p
+                        className="dropdown-option"
+                        onClick={() => handleSelection("/maps")}
+                      >
+                        Maps
+                      </p>
+                      <p
+                        className="dropdown-option"
+                        onClick={() => handleSelection("/flights")}
+                      >
+                        Flights
+                      </p>
+                      <p
+                        className="dropdown-option"
+                        onClick={() => handleSelection("/finance")}
+                      >
+                        Finance
+                      </p>
+                      <p
+                        className="dropdown-option"
+                        onClick={() => handleSelection("/age")}
+                      >
+                        Age
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -109,17 +111,6 @@ function NewsPage() {
             {data?.searchInformation?.formattedSearchTime} seconds) for {term}
           </p>
           <div className="searchPage_result">
-            {/* Loop through each news item */}
-            {data.items.map((item, index) => (
-              <div className="searchPage_newsItem" key={index}>
-                <a className="searchPage_resultLink" href={item.link}>
-                  <h2 className="searchPage_newsTitle">{item.title}</h2>
-                  <p className="searchPage_newsSnippet">{item.snippet}</p>
-                </a>
-              </div>
-            ))}
-
-            {/* Display organization information */}
             {data.items.map((item, index) => (
               <div className="searchPage_newsItem" key={`org-${index}`}>
                 <a className="searchPage_resultLink" href={item.link}>

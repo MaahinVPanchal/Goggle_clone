@@ -3,7 +3,7 @@
   padding-top: 0px;
 }
 
-.searchPage_header {
+.Page_header {
   display: flex;
   position: sticky;
   top: 0;
@@ -34,7 +34,7 @@
   color: black;
 }
 
-.searchPage_optionAll {
+.imagePage_optionAll {
   display: flex;
   align-items: center;
   margin-right: 8px;
@@ -138,4 +138,33 @@
 .dropdown-icon {
   vertical-align: middle;
   margin-right: 5px;
+}
+
+/* CSS for screens up to 700px */
+@media screen and (max-width: 700px) {
+  .searchPage_result {
+    margin: 20px 0;
+  }
+}
+
+/* CSS for screens up to 450px */
+@media screen and (max-width: 450px) {
+  .searchPage_result {
+    margin: 15px 0;
+  }
+  .searchPage_image {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+/* CSS for screens between 250px and 450px */
+@media screen and (min-width: 250px) and (max-width: 450px) {
+  .searchPage_result {
+    margin: 10px 0;
+  }
+  .searchPage_image {
+    height: 100px;
+    width: 100px;
+  }
 }

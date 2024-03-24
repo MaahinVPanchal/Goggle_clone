@@ -40,7 +40,7 @@ function SearchPage() {
           <Search hideButtons />
           <div className="searchPage_options">
             <div className="searchPage_optionsLeft">
-              <div className="searchPage_optionsLeft">
+              <div className="searchPage_optionAll">
                 <div className="searchPage_option">
                   <Link to="/search">All</Link>
                 </div>

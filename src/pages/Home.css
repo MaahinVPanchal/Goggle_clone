@@ -190,8 +190,8 @@
   }
   /* Add styles for icons here (reduce size, adjust spacing) */
   img {
-    width: 30px; /* Reduce image size for icons */
-    height: 30px; /* Reduce image size for icons */
+    width: 242px;
+    height: 145px;
   }
 }
 /* Styles for small mobile devices (e.g., smartphones) */

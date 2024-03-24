@@ -51,7 +51,7 @@ function ImagePage() {
   };
   console.log(data);
   return (
-    <div className="searchPage">
+    <div className="imagePage">
       <div className="searchPage_header">
         <Link to="/">
           <img className="searchPage_logo" src={google_logo} alt="" />
@@ -61,23 +61,24 @@ function ImagePage() {
           <div className="searchPage_options">
             <div className="searchPage_optionsLeft">
               <div className="searchPage_optionAll">
-                <Link to="/search"> All</Link>
-              </div>
-              <div className="searchPage_option">
-                {/* <ImageIcon /> */}
-                <Link to="/images">Images</Link>
-              </div>
+                <div className="searchPage_option">
+                  <Link to="/search">All</Link>
+                </div>
+                <div className="searchPage_option">
+                  {/* <ImageIcon /> */}
+                  <Link to="/images">Images</Link>
+                </div>
 
-              <div className="searchPage_option">
-                {/* <LocalOfferIcon /> */}
-                <Link to="/videos">Videos</Link>
-              </div>
+                <div className="searchPage_option">
+                  {/* <LocalOfferIcon /> */}
+                  <Link to="/videos">Videos</Link>
+                </div>
 
-              <div className="searchPage_option">
-                {/* <DescriptionIcon /> */}
-                <Link to="/news">News</Link>
+                <div className="searchPage_option">
+                  {/* <DescriptionIcon /> */}
+                  <Link to="/news">News</Link>
+                </div>
               </div>
-
               <div className="searchPage_option">
                 <div className="dropdown">
                   <MoreVertIcon className="dropdown-icon" />
@@ -346,7 +347,7 @@ function ImagePage() {
                 </ul>
               </div>
             )}
-            <Avatar style={{marginLeft:"15px"}}/>
+            <Avatar style={{ marginLeft: "15px" }} />
           </div>
         </div>
       </div>
@@ -355,27 +356,83 @@ function ImagePage() {
         <div className="imagePage_results">
           <div className="imagePage_result">
             <style>
-              {`.searchPage_image{
-                  object-fit:contain;
-                  height:250px;
-                  width:250px;
-                  align-items: center;
-                  cursor: pointer;
-                  border: 1.3px solid #ddd;
-                  border-radius: 5px;
-                  transition: all 0.3s ease;
-                  margin:7px;
-              }
-              .imagePage_result{
-                display:flex;
-                flex-wrap:wrap;
-              }
-              .imagePage_results{
-                max-width:2000px;
-                width: 1580px;
-              }
-              `}
+              {`
+    .searchPage_image {
+      object-fit: contain;
+      height: 250px;
+      width: 250px;
+      align-items: center;
+      cursor: pointer;
+      border: 1.3px solid #ddd;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      margin: 7px;
+    }
+
+    .imagePage_result {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .imagePage_results {
+      max-width: 2000px;
+      width: 1580px;
+      overflow-y: auto;
+    }
+
+    @media screen and (max-width: 700px) {
+      .imagePage_results {
+      max-width: 450px;
+      width: 410px;
+      margin-right:10px;
+      overflow-y: auto;
+    }
+      .imagePage_result {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right:10px;
+    }
+      .searchPage_image {
+        height: 250px;
+        width: 250px;
+      }
+    }
+
+    @media screen and (max-width: 450px) {
+      imagePage_results {
+      max-width: 400px;
+      width: 358px;
+      overflow-y: auto;
+    }
+      .imagePage_result {
+      display: flex;
+      flex-wrap: wrap;
+    }
+      .searchPage_image {
+            height: 157px;
+            width: 172px;
+            margin-right: 10px
+      }
+    }
+
+    @media screen and (max-width: 250px) {
+      imagePage_results {
+      max-width: 250px;
+      width: 210px;
+      overflow-y: auto;
+    }
+      .imagePage_result {
+      display: flex;
+      flex-wrap: wrap;
+    }
+      .searchPage_image {
+        height: 100px;
+        width: 100px;
+      }
+    }
+  `}
             </style>
+
             {data?.items?.map((item) => (
               <div className="searchPage_result">
                 <a className="searchPage_resultLink" href={item.link}>

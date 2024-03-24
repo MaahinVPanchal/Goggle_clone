@@ -43,6 +43,7 @@
 .searchPage_options a {
   text-decoration: none;
   color: black;
+  font-size: 14px;
 }
 
 .searchPage_optionsRight {
@@ -82,7 +83,6 @@
   border: none;
   padding: 9px 9px;
   border-radius: 19px;
-  margin-top: -11px;
   font-weight: 400;
 }
 .searchPage_option:hover {
@@ -110,7 +110,7 @@
   object-fit: contain;
   height: 25px;
   width: 43px;
-  margin-right: 10px;
+  margin-right: 7px;
 }
 
 .searchPage_resultTitle {
@@ -183,7 +183,7 @@
     width: 69px;
     height: 38px;
     object-fit: contain;
-    margin-left: 1px;
+    margin-left: -4px;
   }
   .searchPage_header {
     max-width: 65px;
@@ -198,7 +198,7 @@
   }
   .searchPage_options {
     margin-top: 6px;
-    margin-left: -29px;
+    margin-left: -19px;
   }
   .searchPage_option {
     margin: 4px; /* Adjust margin for better spacing */
@@ -229,8 +229,9 @@
   .searchPage_optionsLeft {
     flex-wrap: wrap;
     justify-content: center;
-    margin-left: -37px;
-    margin-top: -6.5px;
+    margin-left: -97px;
+    margin-top: -17.5px;
+    font-size: 14px;
   }
   .searchPage_option {
     margin: 4px; /* Adjust margin for better spacing */
@@ -242,20 +243,20 @@
 /* Media query for screens up to 250px */
 @media only screen and (min-width: 250px) and (max-width: 400px) {
   .searchPage_results {
-    margin-left: 26px;
-    margin-right: 7px;
+    margin-left: 17px;
+    margin-right: 4px;
   }
   .searchPage_result {
     margin: 15px 0; /* Adjust margin for better spacing */
   }
   .searchPage_resultCount {
-    font-size: 11px;
+    font-size: 12px;
     margin-bottom: -2px;
   }
   .searchPage_resultTitle > h2 {
-    font-size: 18px; /* Decrease font size for smaller screens */
+    font-size: 19px; /* Decrease font size for smaller screens */
   }
   .searchPage_resultSnippet {
-    font-size: 12px; /* Decrease font size for smaller screens */
+    font-size: 14px; /* Decrease font size for smaller screens */
   }
 }

@@ -87,6 +87,7 @@
   text-decoration: none; /* Remove default underline */
   color: inherit; /* Inherit color from parent */
 }
+
 .dropdown {
   position: relative;
   display: inline-block;

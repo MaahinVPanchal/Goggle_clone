@@ -30,71 +30,73 @@ function VideoPage() {
           <div className="searchPage_options">
             <div className="searchPage_optionsLeft">
               <div className="searchPage_optionAll">
-                <Link to="/search">&lt; All</Link>
-              </div>
-              <div className="searchPage_option">
-                {/* <ImageIcon /> */}
-                <Link to="/images">Images</Link>
-              </div>
+                <div className="searchPage_option">
+                  <Link to="/search">All</Link>
+                </div>
+                <div className="searchPage_option">
+                  {/* <ImageIcon /> */}
+                  <Link to="/images">Images</Link>
+                </div>
 
-              <div className="searchPage_option">
-                {/* <LocalOfferIcon /> */}
-                <Link to="/videos">Videos</Link>
-              </div>
+                <div className="searchPage_option">
+                  {/* <LocalOfferIcon /> */}
+                  <Link to="/videos">Videos</Link>
+                </div>
 
-              <div className="searchPage_option">
-                {/* <DescriptionIcon /> */}
-                <Link to="/news">News</Link>
-              </div>
+                <div className="searchPage_option">
+                  {/* <DescriptionIcon /> */}
+                  <Link to="/news">News</Link>
+                </div>
 
-              <div className="searchPage_option">
-                <div className="dropdown">
-                  <MoreVertIcon className="dropdown-icon" />
-                  <button className="dropdown-btn">More</button>
-                  <div className="dropdown-content">
-                    <p
-                      className="dropdown-option"
-                      onClick={() => handleSelection("")}
-                    >
-                      <MoreVertIcon className="dropdown-icon" />
-                      More
-                    </p>
-                    <p
-                      className="dropdown-option"
-                      onClick={() => handleSelection("/books")}
-                    >
-                      Books
-                    </p>
-                    <p
-                      className="dropdown-option"
-                      onClick={() => handleSelection("/shopping")}
-                    >
-                      Shopping
-                    </p>
-                    <p
-                      className="dropdown-option"
-                      onClick={() => handleSelection("/maps")}
-                    >
-                      Maps
-                    </p>
-                    <p
-                      className="dropdown-option"
-                      onClick={() => handleSelection("/flights")}
-                    >
-                      Flights
-                    </p>
-                    <p
-                      className="dropdown-option"
-                      onClick={() => handleSelection("/finance")}
-                    >
-                      Finance
-                    </p>
-                    <p
-                      className="dropdown-option"
-                      onClick={() => handleSelection("/age")}
-                    >
-                      Age
-                    </p>
+                <div className="searchPage_option">
+                  <div className="dropdown">
+                    <MoreVertIcon className="dropdown-icon" />
+                    <button className="dropdown-btn">More</button>
+                    <div className="dropdown-content">
+                      <p
+                        className="dropdown-option"
+                        onClick={() => handleSelection("")}
+                      >
+                        <MoreVertIcon className="dropdown-icon" />
+                        More
+                      </p>
+                      <p
+                        className="dropdown-option"
+                        onClick={() => handleSelection("/books")}
+                      >
+                        Books
+                      </p>
+                      <p
+                        className="dropdown-option"
+                        onClick={() => handleSelection("/shopping")}
+                      >
+                        Shopping
+                      </p>
+                      <p
+                        className="dropdown-option"
+                        onClick={() => handleSelection("/maps")}
+                      >
+                        Maps
+                      </p>
+                      <p
+                        className="dropdown-option"
+                        onClick={() => handleSelection("/flights")}
+                      >
+                        Flights
+                      </p>
+                      <p
+                        className="dropdown-option"
+                        onClick={() => handleSelection("/finance")}
+                      >
+                        Finance
+                      </p>
+                      <p
+                        className="dropdown-option"
+                        onClick={() => handleSelection("/age")}
+                      >
+                        Age
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -115,6 +117,16 @@ function VideoPage() {
             {data.items.map((item, index) => (
               <div className="searchPage_result" key={index}>
                 <div className="searchPage_resultLink">
+                  <style>
+                    {`
+    .yt_video_text {
+      font-size: 16px;
+      line-height: 1.4;
+      margin-top: 6px;
+      padding: 8px;
+    }
+  `}
+                  </style>
                   <div className="yt_video">
                     <a
                       className="searchPage_resultLink"
@@ -128,6 +140,8 @@ function VideoPage() {
                         alt={item.snippet.title}
                       />
                     </a>
+                  </div>
+                  <div className="yt_video_text">
                     {item.snippet.title}
                     {item.snippet.description}
                   </div>
