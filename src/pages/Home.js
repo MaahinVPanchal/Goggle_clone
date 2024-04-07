@@ -23,12 +23,17 @@ import Search from "./Search";
 import google_logo from "../images/google_logo2.png";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 
+
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false); // State for dropdown visibility
+  const [isOpen1, setIsOpen1] = useState(false); // State for dropdown visibility
   const [theme, setTheme] = useState("light-theme");
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen); // Toggle dropdown state on click
+  };
+  const toggleDropdown1 = () => {
+    setIsOpen1(!isOpen1); // Toggle dropdown state on click
   };
 
   const toggleDarkMode = () => {
@@ -250,7 +255,25 @@ const Home = () => {
               </ul>
             </div>
           )}
-          <Avatar />
+          <Avatar onClick={toggleDropdown1} />
+          {isOpen1 && (
+            <div className="dropdown1">
+              <ul>
+                <li>
+                  <Avatar />
+                </li>
+                <li>
+                  <button className="button">Manage Account</button>
+                </li>
+                <li>
+                  <button className="button">Add Account</button>
+                </li>
+                <li>
+                  <button className="button">Sign Out</button>
+                </li>
+              </ul>
+            </div>
+          )}
         </div>
       </div>
 
