@@ -22,12 +22,14 @@ import facebook from "../assets/facebook-icon.png";
 import Search from "./Search";
 import google_logo from "../images/google_logo2.png";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
-
+import { useNavigate } from "react-router-dom";
+import Avatarimg from "../images/Avatar.jpg"
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false); // State for dropdown visibility
   const [isOpen1, setIsOpen1] = useState(false); // State for dropdown visibility
   const [theme, setTheme] = useState("light-theme");
+  const navigate = useNavigate();
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen); // Toggle dropdown state on click
@@ -255,18 +257,23 @@ const Home = () => {
               </ul>
             </div>
           )}
-          <Avatar onClick={toggleDropdown1} />
+          <Avatar src={Avatarimg} onClick={toggleDropdown1} />
           {isOpen1 && (
             <div className="dropdown1">
               <ul>
                 <li>
-                  <Avatar />
+                  <Avatar src={Avatarimg} />
                 </li>
                 <li>
                   <button className="button">Manage Account</button>
                 </li>
                 <li>
-                  <button className="button">Add Account</button>
+                  <button
+                    className="button"
+                    onClick={() => navigate("/register")}
+                  >
+                    Add Account
+                  </button>
                 </li>
                 <li>
                   <button className="button">Sign Out</button>

@@ -16,7 +16,7 @@
   position: absolute;
   background-color: #f9f9f9;
   min-width: 110px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   z-index: 1;
   padding: 8px 12px;
 }
@@ -42,3 +42,10 @@
   margin-right: 5px;
 }
 
+/* Assuming you have a CSS file linked in your project where you can add these styles */
+
+.searchPage_newsItem .newsLogo {
+  width: 100px; /* Adjust the width as needed */
+  height: 100px; /* Adjust the height as needed */
+  /* Add any other styles you want */
+}
