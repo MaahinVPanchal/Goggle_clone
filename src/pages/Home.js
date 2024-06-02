@@ -23,9 +23,8 @@ import Search from "./Search";
 import google_logo from "../images/google_logo2.png";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import { useNavigate } from "react-router-dom";
-import Avatarimg from "../images/Avatar.jpg"
 
-const Home = () => {
+const Home = (avatarUrl) => {
   const [isOpen, setIsOpen] = useState(false); // State for dropdown visibility
   const [isOpen1, setIsOpen1] = useState(false); // State for dropdown visibility
   const [theme, setTheme] = useState("light-theme");
@@ -257,15 +256,12 @@ const Home = () => {
               </ul>
             </div>
           )}
-          <Avatar src={Avatarimg} onClick={toggleDropdown1} />
+          <Avatar src={avatarUrl} onClick={toggleDropdown1} />
           {isOpen1 && (
             <div className="dropdown1">
               <ul>
                 <li>
-                  <Avatar src={Avatarimg} />
-                </li>
-                <li>
-                  <button className="button">Manage Account</button>
+                  <Avatar src={avatarUrl} />
                 </li>
                 <li>
                   <button
@@ -276,7 +272,10 @@ const Home = () => {
                   </button>
                 </li>
                 <li>
-                  <button className="button">Sign Out</button>
+                  OR Already have an account
+                  <button className="button" onClick={() => navigate("login")}>
+                    Login
+                  </button>
                 </li>
               </ul>
             </div>

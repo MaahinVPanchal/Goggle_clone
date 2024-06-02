@@ -15,7 +15,7 @@ function App() {
 
   const handleLogin = () => {
     setIsAuthenticated(true);
-    setAvatarUrl("./images/newAvatar.jpg"); // Change avatar URL after login
+    setAvatarUrl("./images/newAvatar.jpg"); // Update avatar URL after login
   };
 
   return (
